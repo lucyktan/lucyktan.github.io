@@ -1,0 +1,45 @@
+body {
+	background-color: #FFFAF0;
+}
+
+.name {
+	color: #008080;
+	font-size: 55px;
+	font-family: 'Georgia', serif;
+	text-align: center;
+	padding-top: 20px;
+}
+
+.name a {
+	text-decoration: none;
+	color: #008080;
+	padding-top: 20px;
+}
+
+.nav {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
+
+.nav li{
+	display: inline;
+}
+
+.nav a{
+	color: #708090;
+	display: inline-block;
+	text-decoration: none;
+	padding-left: 40px;
+	padding-right: 40px;
+	font-family: 'Century Gothic', sans-serif;
+}
+
+.line-separator {
+	height: 1px;
+	width: 300px;
+	background: #717171;
+	border-background: 1px solid #313030;
+	margin: 80px auto 0px auto;
+}
