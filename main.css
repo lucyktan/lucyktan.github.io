@@ -3,12 +3,11 @@ body {
 	background-size: cover;
 	background-attachment: fixed;
 	text-shadow: 2px 3px 2px #aaa;
-
 }
 
 .name {
 	color: #FFFFFF;
-	font-size: 55px;
+	font-size: 65px;
 	font-family: 'Philosopher', 'Georgia', serif;
 	text-align: center;
 }
@@ -38,7 +37,7 @@ body {
 	padding-left: 20px;
 	padding-top: 30px;
 	font-family: 'Josefin Sans','Century Gothic', sans-serif;
-	font-size: 18px;
+	font-size: 20px;
 }
 
 .line-separator {
@@ -50,10 +49,9 @@ body {
 }
 
 .container {
-	position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translateX(-50%) translateY(-40%);
+    margin: 0px auto;
+    width: 600px;
+    padding-top: 50px;
 }
 
 }
