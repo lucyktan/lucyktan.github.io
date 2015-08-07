@@ -1,18 +1,21 @@
 body {
-	background-color: #FFFAF0;
+	background-image: url("water_background.jpg");
+	background-size: cover;
+	background-attachment: fixed;
+	text-shadow: 2px 3px 2px #aaa;
+
 }
 
 .name {
-	color: #008080;
+	color: #FFFFFF;
 	font-size: 55px;
-	font-family: 'Georgia', serif;
+	font-family: 'Philosopher', 'Georgia', serif;
 	text-align: center;
-	padding-top: 20px;
 }
 
 .name a {
 	text-decoration: none;
-	color: #008080;
+	color: #FFFFFF;
 	padding-top: 20px;
 }
 
@@ -24,22 +27,33 @@ body {
 }
 
 .nav li{
-	display: inline;
+	display: block;
 }
 
 .nav a{
-	color: #708090;
+	color: #FFFFFF;
 	display: inline-block;
 	text-decoration: none;
-	padding-left: 40px;
-	padding-right: 40px;
-	font-family: 'Century Gothic', sans-serif;
+	padding-right: 20px;
+	padding-left: 20px;
+	padding-top: 30px;
+	font-family: 'Josefin Sans','Century Gothic', sans-serif;
+	font-size: 18px;
 }
 
 .line-separator {
-	height: 1px;
+	height: 2px;
 	width: 300px;
-	background: #717171;
-	border-background: 1px solid #313030;
+	background: #FFFFFF;
+	border-background: 1px solid #FFFFFF;
 	margin: 80px auto 0px auto;
+}
+
+.container {
+	position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-40%);
+}
+
 }
