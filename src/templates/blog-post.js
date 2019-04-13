@@ -5,12 +5,19 @@ import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { rhythm, scale } from "../utils/typography"
+import kebabCase from "lodash/kebabCase"
+import { DiscussionEmbed } from "disqus-react";
 
 class BlogPostTemplate extends React.Component {
   render() {
     const post = this.props.data.markdownRemark
     const siteTitle = this.props.data.site.siteMetadata.title
     const { previous, next } = this.props.pageContext
+    const disqusShortname = "shreya-shankar-com"
+    const disqusConfig = {
+      identifier: post.id,
+      title: post.frontmatter.title,
+    }
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
@@ -23,11 +30,12 @@ class BlogPostTemplate extends React.Component {
           style={{
             ...scale(-1 / 5),
             display: `block`,
-            marginBottom: rhythm(1),
-            marginTop: rhythm(-1),
+            marginBottom: rhythm(1)
           }}
         >
-          {post.frontmatter.date}
+          {post.frontmatter.date} in <Link to={`/tags/${kebabCase(post.frontmatter.tags)}/`} style={{textTransform: 'uppercase'}}>
+                #{post.frontmatter.tags}
+              </Link>
         </p>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
         <hr
@@ -61,6 +69,7 @@ class BlogPostTemplate extends React.Component {
             )}
           </li>
         </ul>
+        <DiscussionEmbed shortname={disqusShortname} config={disqusConfig} />
       </Layout>
     )
   }
@@ -84,6 +93,7 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         description
+        tags
       }
     }
   }

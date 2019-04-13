@@ -1,10 +1,11 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 
-import Bio from "../components/bio"
+import Links from "../components/links"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { rhythm } from "../utils/typography"
+import kebabCase from "lodash/kebabCase"
 
 class BlogIndex extends React.Component {
   render() {
@@ -15,10 +16,10 @@ class BlogIndex extends React.Component {
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO
-          title="All posts"
-          keywords={[`blog`, `gatsby`, `javascript`, `react`]}
+          title="Shreya Shankar"
+          keywords={[`blog`, `ai`, `diversity`, `computers`]}
         />
-        <Bio />
+        <Links />
         {posts.map(({ node }) => {
           const title = node.frontmatter.title || node.fields.slug
           return (
@@ -32,7 +33,12 @@ class BlogIndex extends React.Component {
                   {title}
                 </Link>
               </h3>
-              <small>{node.frontmatter.date}</small>
+              <small>{node.frontmatter.date} in </small>
+              <small style={{textTransform: 'uppercase', color: '#00688B'}}>
+              <Link to={`/tags/${kebabCase(node.frontmatter.tags)}/`}>
+                #{node.frontmatter.tags}
+              </Link>
+              </small>
               <p
                 dangerouslySetInnerHTML={{
                   __html: node.frontmatter.description || node.excerpt,
@@ -66,6 +72,7 @@ export const pageQuery = graphql`
             date(formatString: "MMMM DD, YYYY")
             title
             description
+            tags
           }
         }
       }

@@ -37,11 +37,6 @@ function Bio() {
                 borderRadius: `50%`,
               }}
             />
-            <p>
-              I'm a software engineer at an e-commerce company, where I work on productionalizing recommendation models. 
-              My goal is to become a better machine learning engineer and researcher.
-              {` `}
-            </p>
           </div>
         )
       }}
