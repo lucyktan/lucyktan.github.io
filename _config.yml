@@ -16,14 +16,15 @@ dark_header: false           # keep the header dark
 
 navigation:                  # (optional) site navigation in the header
 #  - index.html
- - README.md
+#  - README.md
 #  - title: "https://"       # linking external sites is also supported
 
 icons:                       # (optional) icons in the header, see http://fontawesome.com/icons
+  user-alt: "/about"
   envelope: "mailto:lucyktan@gmail.com"
   github: "https://github.com/lucyktan"
   twitter: "https://www.twitter.com/lucyktan"
-  rss: "/contrast/feed.xml"
+  rss: "/feed.xml"
 
 # Pagination
 show_excerpts: true         # preview articles on the home page
