@@ -3,4 +3,4 @@ title: "About"
 permalink: "/about/"
 ---
 
-I'm a software engineer in San Francisco, where I work on scaling and bringing machine learning models into production. My goal is to become a better machine learning engineer and researcher. This is a place for me to write about my learnings.
+I am currently a graduate student at Harvard University studying data science and machine learning. Previously, I worked as a software engineer on building end-to-end production-level machine learning workflows in the cloud.
